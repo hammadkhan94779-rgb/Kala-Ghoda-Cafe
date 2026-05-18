@@ -1,1 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kala Ghoda Cafe | Artistic Luxury Cafe • Mumbai</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- PREMIUM LOADER SCREEN -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-logo">KALA GHODA</div>
+      <div class="loader-coffee"><span></span></div>
+      <div class="loader-text">CAFE</div>
+      <div class="loader-dots"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress"></div>
+
+  <!-- AUDIO TOGGLE -->
+  <button class="audio-toggle" id="audioToggle">
+    <i class="fas fa-music"></i>
+    <i class="fas fa-volume-mute" style="display: none;"></i>
+  </button>
+  <audio id="ambientMusic" loop preload="auto">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- DARK/LIGHT MODE TOGGLE -->
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-sun"></i>
+    <i class="fas fa-moon" style="display: none;"></i>
+  </button>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- PREMIUM GLASS NAVBAR -->
+  <nav class="glass-navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">KALA GHODA<span> CAFE</span></a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+    <section id="home" class="hero">
+      <div class="hero-video-bg">
+        <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&h=900&fit=crop">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-pouring-coffee-into-a-glass-close-up-32778-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content fade-up">
+        <span class="hero-pretitle">South Mumbai • Est. 2009</span>
+        <h1 class="hero-title">
+          <span class="text-reveal-word">Kala</span>
+          <span class="text-reveal-word">Ghoda</span>
+          <span class="text-reveal-word">Cafe</span>
+        </h1>
+        <div class="hero-divider"></div>
+        <p class="hero-subtitle typewriter-text" id="typewriter"></p>
+        <a href="#booking" class="btn-gold magnetic-btn">Reserve A Table <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="mouse-follow-glow"></div>
+    </section>
+
+    <!-- PREMIUM STATISTICS SECTION -->
+    <section class="section stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card glass-card fade-up">
+            <div class="stat-number" data-target="12">0</div>
+            <div class="stat-label">Years of Excellence</div>
+          </div>
+          <div class="stat-card glass-card fade-up">
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label">K+ Happy Customers</div>
+          </div>
+          <div class="stat-card glass-card fade-up">
+            <div class="stat-number" data-target="25">0</div>
+            <div class="stat-label">Signature Coffees</div>
+          </div>
+          <div class="stat-card glass-card fade-up">
+            <div class="stat-number" data-target="49">0</div>
+            <div class="stat-label">⭐ 4.9 Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE MENU SECTION WITH FILTERS -->
+    <section id="menu" class="section menu-section">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-tag">— Artisanal Selections —</span>
+          <h2>Signature Menu</h2>
+          <p>Handcrafted brews & culinary masterpieces</p>
+        </div>
+        
+        <!-- PREMIUM MENU FILTER SYSTEM -->
+        <div class="menu-filters fade-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="coffee">Coffee</button>
+          <button class="filter-btn" data-filter="dessert">Desserts</button>
+          <button class="filter-btn" data-filter="beverage">Beverages</button>
+          <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+          <button class="filter-btn" data-filter="special">Signature Specials</button>
+        </div>
+        
+        <div class="menu-grid" id="menuGrid">
+          <div class="menu-card glass-card 3d-card" data-category="coffee">
+            <div class="menu-img steam-container"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&h=400&fit=crop" alt="Cappuccino"><div class="coffee-steam"></div></div>
+            <h3>Cappuccino</h3>
+            <p>Velvety foam, double espresso, dusted with cocoa</p>
+            <span class="price">₹325</span>
+          </div>
+          <div class="menu-card glass-card 3d-card" data-category="coffee">
+            <div class="menu-img steam-container"><img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=500&h=400&fit=crop" alt="Espresso"><div class="coffee-steam"></div></div>
+            <h3>Espresso</h3>
+            <p>Bold, aromatic single-origin shot with crema</p>
+            <span class="price">₹225</span>
+          </div>
+          <div class="menu-card glass-card 3d-card" data-category="coffee beverage">
+            <div class="menu-img steam-container"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&h=400&fit=crop" alt="Mocha Latte"><div class="coffee-steam"></div></div>
+            <h3>Mocha Latte</h3>
+            <p>Silky chocolate & espresso, steamed milk</p>
+            <span class="price">₹375</span>
+          </div>
+          <div class="menu-card glass-card 3d-card" data-category="beverage coffee">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=500&h=400&fit=crop" alt="Cold Brew"></div>
+            <h3>Cold Brew</h3>
+            <p>Slow-steeped 18h, served over crystal ice</p>
+            <span class="price">₹350</span>
+          </div>
+          <div class="menu-card glass-card 3d-card" data-category="beverage">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=500&h=400&fit=crop" alt="Hot Chocolate"></div>
+            <h3>Hot Chocolate</h3>
+            <p>Belgian dark cocoa, vanilla bean & cream</p>
+            <span class="price">₹320</span>
+          </div>
+          <div class="menu-card glass-card 3d-card" data-category="dessert special">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d958e?w=500&h=400&fit=crop" alt="Signature Dessert"></div>
+            <h3>Signature Dessert</h3>
+            <p>Chef's tiramisu • pistachio semifreddo</p>
+            <span class="price">₹450</span>
+          </div>
+          <div class="menu-card glass-card 3d-card" data-category="breakfast">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=500&h=400&fit=crop" alt="Artisan Sandwich"></div>
+            <h3>Artisan Sandwich</h3>
+            <p>Grilled pesto, cottage cheese & arugula</p>
+            <span class="price">₹390</span>
+          </div>
+          <div class="menu-card glass-card 3d-card" data-category="dessert special">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&h=400&fit=crop" alt="Almond Cake"></div>
+            <h3>Almond Cake</h3>
+            <p>Gluten-friendly, honey-almond crumble</p>
+            <span class="price">₹280</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION WITH PARALLAX -->
+    <section id="about" class="section about-section parallax-bg">
+      <div class="container about-container">
+        <div class="about-text fade-up">
+          <span class="section-tag">— Heritage & Soul —</span>
+          <h2>Where art meets<br>European café culture</h2>
+          <p>Nestled in the heart of Mumbai's historic Kala Ghoda district, our café is a sanctuary for artists, writers, and dreamers. Inspired by the golden era of European coffee houses and the artistic spirit of South Mumbai, we serve handcrafted coffee, curated interiors, and timeless elegance.</p>
+          <div class="about-features">
+            <div><i class="fas fa-mug-hot"></i> Single-origin beans</div>
+            <div><i class="fas fa-palette"></i> Curated art gallery</div>
+            <div><i class="fas fa-wine-glass-alt"></i> Vintage wine bar</div>
+          </div>
+          <a href="#menu" class="btn-outline magnetic-btn">Explore Menu <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="about-image parallax-img fade-up">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=1000&fit=crop" alt="Kala Ghoda interior vintage elegance">
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION WITH LIGHTBOX -->
+    <section id="gallery" class="section gallery-section">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-tag">— Visual Poetry —</span>
+          <h2>Cinematic Gallery</h2>
+          <p>Moments steeped in luxury & warmth</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+          <div class="gallery-item fade-up" data-image="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&h=800&fit=crop"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&h=500&fit=crop" alt="Artisan coffee pour"></div>
+          <div class="gallery-item fade-up" data-image="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=1200&h=800&fit=crop"><img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=600&h=500&fit=crop" alt="Cafe interior wood and gold"></div>
+          <div class="gallery-item fade-up" data-image="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1200&h=800&fit=crop"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&h=500&fit=crop" alt="Morning coffee sunlight"></div>
+          <div class="gallery-item fade-up" data-image="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&h=800&fit=crop"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=500&fit=crop" alt="Dessert presentation"></div>
+          <div class="gallery-item fade-up" data-image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&h=800&fit=crop"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=500&fit=crop" alt="Cozy seating area"></div>
+          <div class="gallery-item fade-up" data-image="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1200&h=800&fit=crop"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&h=500&fit=crop" alt="Artistic latte art"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <span class="lightbox-prev">&#10094;</span>
+      <span class="lightbox-next">&#10095;</span>
+      <img class="lightbox-image" src="">
+    </div>
+
+    <!-- TESTIMONIAL SECTION WITH 3D CARDS -->
+    <section id="testimonials" class="section testimonials-section">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-tag">— Voices of Kala Ghoda —</span>
+          <h2>Connoisseurs Speak</h2>
+          <p>Revered by artists, travellers & coffee purists</p>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card glass-card 3d-card fade-up">
+            <i class="fas fa-quote-left gold-quote"></i>
+            <p>"The most artistic café experience in Mumbai. Every corner feels like a European painting."</p>
+            <div class="testimonial-author">— Aditya Rajan <span>| Writer</span></div>
+          </div>
+          <div class="testimonial-card glass-card 3d-card fade-up">
+            <i class="fas fa-quote-left gold-quote"></i>
+            <p>"Beautiful atmosphere and premium coffee. Feels like a luxury European café hidden in Fort."</p>
+            <div class="testimonial-author">— Nandini S. <span>| Creative Director</span></div>
+          </div>
+          <div class="testimonial-card glass-card 3d-card fade-up">
+            <i class="fas fa-quote-left gold-quote"></i>
+            <p>"Elegance, timeless design and the warmest hospitality. Kala Ghoda Cafe is heritage redefined."</p>
+            <div class="testimonial-author">— Rohan Mehta <span>| Entrepreneur</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREMIUM BOOKING FORM -->
+    <section id="booking" class="section booking-section">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-tag">— Secure Your Experience —</span>
+          <h2>Make a Reservation</h2>
+          <p>Book your table for an unforgettable culinary journey</p>
+        </div>
+        <div class="booking-wrapper glass-card fade-up">
+          <form id="bookingForm" class="booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <i class="fas fa-phone"></i>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="date" id="date" required>
+                <i class="fas fa-calendar"></i>
+              </div>
+              <div class="form-group">
+                <input type="time" id="time" required>
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="form-group">
+                <input type="number" id="guests" placeholder="Number of Guests" min="1" max="20" required>
+                <i class="fas fa-users"></i>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <textarea id="message" placeholder="Special Requests (optional)" rows="3"></textarea>
+              <i class="fas fa-comment"></i>
+            </div>
+            <button type="submit" class="btn-gold magnetic-btn">Book Your Table <i class="fas fa-check-circle"></i></button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVATION / CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info fade-up">
+            <span class="section-tag">— Visit Us —</span>
+            <h2>Kala Ghoda Cafe</h2>
+            <div class="contact-details">
+              <div class="contact-item"><i class="fas fa-map-marker-alt"></i> 10 Rope Walk Lane, Kala Ghoda, Fort, Mumbai - 400001</div>
+              <div class="contact-item"><i class="fas fa-phone-alt"></i> +91 22 6999 0808</div>
+              <div class="contact-item"><i class="fas fa-envelope"></i> hello@kalaghoda.cafe</div>
+              <div class="contact-item"><i class="fas fa-clock"></i> Mon–Sun | 8:00 AM — 12:00 Midnight</div>
+            </div>
+            <a href="tel:+912269990808" class="btn-gold magnetic-btn"><i class="fas fa-calendar-alt"></i> Call to Reserve</a>
+          </div>
+          <div class="contact-map fade-up">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.234567890123!2d72.830000!3d18.927000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9b0c6a7c1d9%3A0x8f9e1b2a3c4d5e6f!2sKala%20Ghoda%20Cafe!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ADVANCED FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>KALA GHODA<span> CAFE</span></h3>
+          <p>Artistic luxury • Mumbai heritage • European soul</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-hours">
+          <h4>Opening Hours</h4>
+          <p>Monday - Sunday</p>
+          <p class="gold-text">8:00 AM — 12:00 Midnight</p>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Get exclusive offers & updates</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email">
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Kala Ghoda Cafe — South Mumbai's finest coffee sanctuary. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
